@@ -1,0 +1,4 @@
+.search__input .input {
+  display: block; }
+  .search__input .input input {
+    width: 100%; }

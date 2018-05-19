@@ -1,0 +1,11 @@
+.search {
+  &__input {
+    .input {
+      display: block;
+
+      input {
+        width: 100%;
+      }
+    }
+  }
+}

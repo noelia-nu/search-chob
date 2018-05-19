@@ -1,0 +1,18 @@
+@import 'variables';
+@import url('https://fonts.googleapis.com/css?family=Poppins|Raleway');
+
+.app {
+  &__title {
+    display: inline-block;
+    margin-left: 1rem;
+    margin-top: 0;
+    position: relative;
+    top: 0.5rem;
+    vertical-align: top;
+  }
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+}
