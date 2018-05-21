@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import logo from './logo.svg';
 import './app.css';
-import Search from './components/search/search';
+import HomePage from './pages/home/home';
 import { Button, Container, Divider, Grid, Header, Image, Menu, Segment } from 'semantic-ui-react'
 
 class App extends Component {
@@ -28,7 +28,7 @@ class App extends Component {
         <div className="app-container">
           <Router>
             <div>
-              <Route path='/' component={Search} />
+              <Route path='/' component={HomePage} />
             </div>
           </Router>
         </div>
