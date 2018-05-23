@@ -1,0 +1,21 @@
+.movie {
+  margin: 2rem 0; }
+  .movie__wrapper {
+    border: 1px solid #f7f7f7;
+    padding: 1rem; }
+    .movie__wrapper:hover {
+      border-color: #06D6A0;
+      cursor: pointer; }
+  .movie__title {
+    display: block;
+    color: #06D6A0;
+    text-align: center;
+    text-decoration: none; }
+    .movie__title:hover {
+      color: #06D6A0;
+      text-decoration: underline; }
+  .movie__img {
+    margin-bottom: 1rem;
+    text-align: center; }
+  .movie__desc {
+    color: #686868; }

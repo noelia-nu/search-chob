@@ -4,18 +4,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Container, Search, Header } from 'semantic-ui-react';
 import _ from 'lodash';
-import faker from 'faker';
-
-const source = _.times(5, () => ({
-  title: faker.company.companyName(),
-  description: faker.company.catchPhrase(),
-  image: faker.internet.avatar(),
-  price: faker.finance.amount(0, 100, 2, '$'),
-}))
-
 
 class SearchPage extends Component {
-
   constructor(props, context) {
     super(props, context);
   }
@@ -24,22 +14,22 @@ class SearchPage extends Component {
     this.resetComponent()
   }
 
-  resetComponent = () => this.setState({ isLoading: false, results: [], value: '' })
+  resetComponent = () => this.setState({ isLoading: false, results: [], value: '' });
 
-  handleResultSelect = (e, { result }) => this.setState({ value: result.title })
+  handleResultSelect = (e, { result }) => this.setState({ value: result.name });
 
   handleSearchChange = (e, { value }) => {
-    this.setState({ isLoading: true, value })
+    this.setState({ isLoading: true, value });
 
     setTimeout(() => {
       if (this.state.value.length < 1) return this.resetComponent();
 
       const re = new RegExp(_.escapeRegExp(this.state.value), 'i');
-      const isMatch = result => re.test(result.title);
+      const isMatch = result => re.test(result.name);
 
       this.setState({
         isLoading: false,
-        results: _.filter(source, isMatch),
+        results: _.filter(this.props.items, isMatch),
       });
     }, 300);
   }
@@ -64,4 +54,10 @@ class SearchPage extends Component {
   }
 }
 
-export default SearchPage;
+function mapStateToProps(state, ownProps) {
+  return {
+      items: ownProps.items
+  };
+}
+
+export default connect(mapStateToProps)(SearchPage);

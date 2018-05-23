@@ -1,11 +1,11 @@
 import 'normalize.css/normalize.css';
 import 'semantic-ui-css/semantic.min.css';
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import logo from './logo.svg';
 import './app.css';
 import HomePage from './pages/home/home';
-import { Button, Container, Divider, Grid, Header, Image, Menu, Segment } from 'semantic-ui-react'
+import { Container, Grid } from 'semantic-ui-react';
 
 class App extends Component {
   constructor(props) {
@@ -25,7 +25,7 @@ class App extends Component {
              </Grid.Column>
            </Grid>
         </header>
-        <div className="app-container">
+        <div className="app__container">
           <Router>
             <div>
               <Route path='/' component={HomePage} />

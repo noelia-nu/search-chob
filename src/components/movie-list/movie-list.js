@@ -1,6 +1,8 @@
+import './movie-list.css';
 import React, { Component } from 'react';
 import Movie from '../../components/movie-item/movie-item';
 import { connect } from 'react-redux';
+import Search from '../../components/search/search';
 
 class MovieList extends Component {
   constructor(props, context) {
@@ -15,9 +17,17 @@ class MovieList extends Component {
     if (this.props.items && this.props.items.length > 0) {
       return (
         <div>
-          {this.props.items.map(movie =>
-            <Movie data={movie} />
-          )}
+          <Search items={this.props.items} />
+
+          <div className="movies__container">
+            <h2>Trending!</h2>
+
+            <div className="movies__container__list">
+              {this.props.items.map(movie =>
+                <Movie data={movie} />
+              )}
+            </div>
+          </div>
         </div>
       )
     }

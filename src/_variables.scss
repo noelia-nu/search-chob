@@ -1,6 +1,8 @@
 $primary-color: #073B4C;
 $secondary-color: #118AB2;
 
+$line-color: #f7f7f7;
+
 $accent-color-1: #06D6A0;
 $accent-color-2: #FFD166;
 $accent-color-3: #EF476F;
@@ -8,13 +10,14 @@ $accent-color-3: #EF476F;
 $base-font-family: 'Raleway', sans-serif;;
 $base-font-size: 1rem;
 $base-font-color: #050505;
+$secondary-font-color: #686868;
 $lead-font-size: 4rem;
 $sm-font-size: 0.75rem;
 
 $headings-color: $accent-color-2;
 $headings-font-family: 'Poppins', sans-serif;
 
-$link-txt-color: $primary-color;
+$link-txt-color: $accent-color-1;
 $link-txt-decoration: none;
 $link-txt-color-hover: $secondary-color;
 $link-txt-decoration-hover: underline;
