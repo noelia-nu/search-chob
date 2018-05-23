@@ -1,6 +1,6 @@
 import './movie-list.css';
 import React, { Component } from 'react';
-import Movie from '../../components/movie-item/movie-item';
+import MovieItem from '../../components/movie-item/movie-item';
 import { connect } from 'react-redux';
 import Search from '../../components/search/search';
 
@@ -24,7 +24,7 @@ class MovieList extends Component {
 
             <div className="movies__container__list">
               {this.props.items.map(movie =>
-                <Movie data={movie} />
+                <MovieItem data={movie} />
               )}
             </div>
           </div>
